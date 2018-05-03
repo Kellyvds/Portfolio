@@ -1,0 +1,256 @@
+
+.background {
+    position: absolute;
+    top: 0;
+    background: url('img/backgr-01.png') no-repeat left;
+    background-size: cover;
+    width: 12000px;
+    height: 100%;
+    z-index: -2;
+    left: 0;
+    border: 0;
+    overflow-x: hidden;
+}
+
+body{
+    overflow-x: inherit;
+}
+
+/* buttons uxu */
+.deur_uxu_gebronderzoek {
+    background-color: black;
+    float: left;
+    margin-left: 320%;
+    margin-top: 31.7%;
+    position: absolute;
+}
+
+.btn_gebronderzoek {
+    background-color: black;
+    color: white;
+    height: 300px;
+    width: 200px;
+    border: none;
+}
+
+.deur_uxu_prototypen {
+    background-color: black;
+    float: left;
+    margin-left: 340%;
+    margin-top: 31.7%;
+    position: absolute;
+}
+
+.btn_prototypen {
+    background-color: black;
+    color: white;
+    height: 300px;
+    width: 200px;
+    border: none;
+}
+
+/*buttons sco*/
+.deur_sco_conceptueeldenken {
+    background-color: black;
+    float: left;
+    margin-left: 390%;
+    margin-top: 31.7%;
+    position: absolute;
+}
+
+.btn_conceptueeldenken {
+    background-color: black;
+    color: white;
+    height: 300px;
+    width: 200px;
+    border: none;
+}
+
+.deur_sco_mediastrategie {
+    background-color: black;
+    float: left;
+    margin-left: 410%;
+    margin-top: 31.7%;
+    position: absolute;
+}
+
+.btn_mediastrategie {
+    background-color: black;
+    color: white;
+    height: 300px;
+    width: 200px;
+    border: none;
+}
+
+.deur_sco_beargumenteerd {
+    background-color: black;
+    float: left;
+    margin-left: 430%;
+    margin-top: 31.7%;
+    position: absolute;
+}
+
+.btn_beargumenteerd {
+    background-color: black;
+    color: white;
+    height: 300px;
+    width: 200px;
+    border: none;
+}
+
+/* buttons scrum */
+
+.deur_scrum_kennisentoepassing
+{
+    background-color: black;
+    float: left;
+    margin-left: 460%;
+    margin-top: 31.7%;
+    position: absolute;
+}
+
+.btn_kennisentoepassing {
+    background-color: black;
+    color: white;
+    height: 300px;
+    width: 200px;
+    border: none;
+}
+
+.deur_scrum_oordeelsvorming
+{
+    background-color: black;
+    float: left;
+    margin-left: 480%;
+    margin-top: 31.7%;
+    position: absolute;
+}
+
+.btn_oordeelsvorming {
+    background-color: black;
+    color: white;
+    height: 300px;
+    width: 200px;
+    border: none;
+}
+
+.deur_scrum_communicatie
+{
+    background-color: black;
+    float: left;
+    margin-left: 500%;
+    margin-top: 31.7%;
+    position: absolute;
+}
+
+.btn_communicatie {
+    background-color: black;
+    color: white;
+    height: 300px;
+    width: 200px;
+    border: none;
+}
+
+.deur_scrum_leervaardigheid
+{
+    background-color: black;
+    float: left;
+    margin-left: 520%;
+    margin-top: 31.7%;
+    position: absolute;
+}
+
+.btn_leervaardigheid {
+    background-color: black;
+    color: white;
+    height: 300px;
+    width: 200px;
+    border: none;
+}
+
+/* buttons dev */
+
+.deur_dev_libraries
+{
+    background-color: black;
+    float: left;
+    margin-left: 545%;
+    margin-top: 31.7%;
+    position: absolute;
+}
+
+.btn_libraries {
+    background-color: black;
+    color: white;
+    height: 300px;
+    width: 200px;
+    border: none;
+}
+
+.deur_dev_documentatie
+{
+    background-color: black;
+    float: left;
+    margin-left: 560%;
+    margin-top: 31.7%;
+    position: absolute;
+}
+
+.btn_documentatie {
+    background-color: black;
+    color: white;
+    height: 300px;
+    width: 200px;
+    border: none;
+}
+
+.deur_dev_versiebeheer
+{
+    background-color: black;
+    float: left;
+    margin-left: 575%;
+    margin-top: 31.7%;
+    position: absolute;
+}
+
+.btn_versiebeheer {
+    background-color: black;
+    color: white;
+    height: 300px;
+    width: 200px;
+    border: none;
+}
+
+.deur_dev_code
+{
+    background-color: black;
+    float: left;
+    margin-left: 590%;
+    margin-top: 31.7%;
+    position: absolute;
+}
+
+.btn_code {
+    background-color: black;
+    color: white;
+    height: 300px;
+    width: 200px;
+    border: none;
+}
+
+.deur_dev_seo
+{
+    background-color: black;
+    float: left;
+    margin-left: 605%;
+    margin-top: 31.7%;
+    position: absolute;
+}
+
+.btn_seo {
+    background-color: black;
+    color: white;
+    height: 300px;
+    width: 200px;
+    border: none;
+}
