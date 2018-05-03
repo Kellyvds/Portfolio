@@ -1,4 +1,3 @@
-
 .background {
     position: absolute;
     top: 0;
@@ -12,11 +11,13 @@
     overflow-x: hidden;
 }
 
-body{
+body {
     overflow-x: inherit;
 }
 
+
 /* buttons uxu */
+
 .deur_uxu_gebronderzoek {
     background-color: black;
     float: left;
@@ -32,6 +33,46 @@ body{
     width: 200px;
     border: none;
 }
+
+
+/* modal gebr onderzoek uxu */
+
+.cl_modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal_content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close_uxu_1, .close_uxu_2, .close_sco_1 {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close_uxu_1, .close_uxu_2, .close_sco_1:hover,
+.close_uxu_1, .close_uxu_2, .close_sco_1:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 .deur_uxu_prototypen {
     background-color: black;
@@ -49,7 +90,31 @@ body{
     border: none;
 }
 
+.cl_modal_prototypen {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal_content_prototypen {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+
 /*buttons sco*/
+
 .deur_sco_conceptueeldenken {
     background-color: black;
     float: left;
@@ -57,6 +122,8 @@ body{
     margin-top: 31.7%;
     position: absolute;
 }
+
+
 
 .btn_conceptueeldenken {
     background-color: black;
@@ -98,10 +165,10 @@ body{
     border: none;
 }
 
+
 /* buttons scrum */
 
-.deur_scrum_kennisentoepassing
-{
+.deur_scrum_kennisentoepassing {
     background-color: black;
     float: left;
     margin-left: 460%;
@@ -117,8 +184,7 @@ body{
     border: none;
 }
 
-.deur_scrum_oordeelsvorming
-{
+.deur_scrum_oordeelsvorming {
     background-color: black;
     float: left;
     margin-left: 480%;
@@ -134,8 +200,7 @@ body{
     border: none;
 }
 
-.deur_scrum_communicatie
-{
+.deur_scrum_communicatie {
     background-color: black;
     float: left;
     margin-left: 500%;
@@ -151,8 +216,7 @@ body{
     border: none;
 }
 
-.deur_scrum_leervaardigheid
-{
+.deur_scrum_leervaardigheid {
     background-color: black;
     float: left;
     margin-left: 520%;
@@ -168,10 +232,10 @@ body{
     border: none;
 }
 
+
 /* buttons dev */
 
-.deur_dev_libraries
-{
+.deur_dev_libraries {
     background-color: black;
     float: left;
     margin-left: 545%;
@@ -187,8 +251,7 @@ body{
     border: none;
 }
 
-.deur_dev_documentatie
-{
+.deur_dev_documentatie {
     background-color: black;
     float: left;
     margin-left: 560%;
@@ -204,8 +267,7 @@ body{
     border: none;
 }
 
-.deur_dev_versiebeheer
-{
+.deur_dev_versiebeheer {
     background-color: black;
     float: left;
     margin-left: 575%;
@@ -221,8 +283,7 @@ body{
     border: none;
 }
 
-.deur_dev_code
-{
+.deur_dev_code {
     background-color: black;
     float: left;
     margin-left: 590%;
@@ -238,8 +299,7 @@ body{
     border: none;
 }
 
-.deur_dev_seo
-{
+.deur_dev_seo {
     background-color: black;
     float: left;
     margin-left: 605%;
