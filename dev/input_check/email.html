@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Input Check</title>
+</head>
+
+<body>
+    <script>
+        function validateemail() {
+            var x = document.myform.email.value;
+            var atposition = x.indexOf("@");
+            var dotposition = x.lastIndexOf(".");
+            if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
+                alert("Voer een geldig email-adres in.");
+                return false;
+            }
+        }
+
+    </script>
+
+        <form name="myform" method="post" action="http://www.javatpoint.com/javascriptpages/valid.jsp" onsubmit="return validateemail();">
+            <p>Email validatie</p>
+            Email: <input type="text" name="email"><br/>
+            <input type="submit" value="register">
+        </form>
+    </body>
+    
+    
+
+</html>

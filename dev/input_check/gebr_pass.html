@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function validate() {
+            var name = document.f1.name.value;
+            var password = document.f1.password.value;
+            var namelength = document.f1.name.value.length;
+            var passwordlength = document.f1.password.value.length;
+            var status = false;
+            if (name == "") {  //begin checkup naam //is de input leeg?
+                document.getElementById("namelocation").innerHTML =           "Voer uw naam in alstublieft.";
+                status = false;
+            } if (namelength > 32){     //naam niet langer dan 32
+                document.getElementById("namelocation").innerHTML = "Naam mag niet langer zijn dan 32 karakters.";
+                status = false;
+            } if (name.match(/[!?@#$%^&*(){}:;''"".,]/)){   //staan deze symbolen erin?
+                document.getElementById("namelocation").innerHTML = "Symbolen niet toegestaan.";
+                status = false;
+            } else if (status == true) {    //alles goed ingevuld.
+                document.getElementById("namelocation").innerHTML = "Naam is goed";
+                status = true;
+            }   	               //eind checkup naam
+            
+            if(password == "") {    //begin checkup wachtwoord
+                document.getElementById("passwordlocation").innerHTML = "Voer hier uw wachtwoord in alstublieft.";
+                status = false;
+            } if (passwordlength < 8){
+                document.getElementById("passwordlocation").innerHTML = "Sorry, uw wachtwoord moet minimaal 8 karakters lang zijn.";
+                status = false;
+            } if (passwordlength > 32){
+                document.getElementById("passwordlocation").innerHTML = "Sorry, wachtwoord mag niet langer zijn dan 32 karakters";
+                status = false;
+            } if (password.match(/[A-Z+]/)){
+                document.getElementById("passwordlocation").innerHTML = "Wachtwoord moet minimaal 1 hoofdletter bevatten.";
+                status = false;
+            } if (password.match())
+
+            return status;
+        }
+
+    </script>
+    <form name="f1" action="http://www.javatpoint.com/javascriptpages/valid.jsp" onsubmit="return validate()">
+        <table>
+            <tr>
+                <td>Naam:</td>
+                <td><input type="text" name="name" />
+                    <span id="namelocation" style="color:red"></span></td>
+            </tr>
+            <tr>
+                <td>Wachtwoord:</td>
+                <td><input type="password" name="password" />
+                    <span id="passwordlocation" style="color:red"></span></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="register" /> </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
