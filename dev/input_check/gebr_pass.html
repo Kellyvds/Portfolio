@@ -9,60 +9,92 @@
 <body>
     <script type="text/javascript">
         function validate() {
+            // In de form input heb ik de validate attribute neergezet.
+
+            // Hier worden alle velden uit de form opgehaald.
+            var fields = f1.getElementsByTagName('input');
+
+            // Door de velden wordt doorheen gelooped en gekeken of ze een validate tag hebben.
+            // Als je de form nu invult dan zie het resultaat in de console.
+            var attribute = [];
+            for (i = 0; i < fields.length; i++) {
+
+                // Controleert of de input een submit is.
+                if (fields[i].type != "submit") {
+
+                    // De validate worden losgehaald en in een array geplaatst. Deze kun je in de console bekijken als je de array hebt ingevuld en gesubmitted
+                    attribute.push(fields[i].getAttribute('validate').split('|'));
+                }
+            }
+
+            console.log(attribute);
+            
             var name = document.f1.name.value;
             var password = document.f1.password.value;
             var namelength = document.f1.name.value.length;
             var passwordlength = document.f1.password.value.length;
+
             var status = false;
-            if (name == "") {  //begin checkup naam //is de input leeg?
-                document.getElementById("namelocation").innerHTML =           "Voer uw naam in alstublieft.";
+            if (name == "") { //begin checkup naam //is de input leeg?
+                document.getElementById("namelocation").innerHTML = "Voer uw naam in alstublieft.";
                 status = false;
-            } if (namelength > 32){     //naam niet langer dan 32
+            }
+            if (namelength > 32) { //naam niet langer dan 32
                 document.getElementById("namelocation").innerHTML = "Naam mag niet langer zijn dan 32 karakters.";
                 status = false;
-            } if (name.match(/[!?@#$%^&*(){}:;''"".,]/)){   //staan deze symbolen erin?
+            }
+            if (name.match(/[!?@#$%^&*(){}:;''"".,]/)) { //staan deze symbolen erin?
                 document.getElementById("namelocation").innerHTML = "Symbolen niet toegestaan.";
                 status = false;
-            } else if (status == true) {    //alles goed ingevuld.
-                document.getElementById("namelocation").innerHTML = "Naam is goed";
+            } else if (status == true) { //alles goed ingevuld.
+                window.alert("GOED!");
                 status = true;
-            }   	               //eind checkup naam
-            
-            if(password == "") {    //begin checkup wachtwoord
-                document.getElementById("passwordlocation").innerHTML = "Voer hier uw wachtwoord in alstublieft.";
+            } //eind checkup naam
+
+            if (passwordlength < 8) {
+                document.getElementById("passwordlocation").innerHTML =
+                    "Sorry, uw wachtwoord moet minimaal 8 karakters lang zijn.";
                 status = false;
-            } if (passwordlength < 8){
-                document.getElementById("passwordlocation").innerHTML = "Sorry, uw wachtwoord moet minimaal 8 karakters lang zijn.";
+            }
+            if (passwordlength > 32) {
+                document.getElementById("passwordlocation").innerHTML =
+                    "Sorry, wachtwoord mag niet langer zijn dan 32 karakters";
                 status = false;
-            } if (passwordlength > 32){
-                document.getElementById("passwordlocation").innerHTML = "Sorry, wachtwoord mag niet langer zijn dan 32 karakters";
+            }
+            if (!password.match(/[A-Z+]/)) {
+                document.getElementById("passwordlocation").innerHTML =
+                    "Wachtwoord moet minimaal 1 hoofdletter bevatten.";
                 status = false;
-            } if (password.match(/[A-Z+]/)){
-                document.getElementById("passwordlocation").innerHTML = "Wachtwoord moet minimaal 1 hoofdletter bevatten.";
-                status = false;
-            } if (password.match())
+            }
+            if (password.match()) {}
 
             return status;
         }
 
     </script>
-    <form name="f1" action="http://www.javatpoint.com/javascriptpages/valid.jsp" onsubmit="return validate()">
+    <form name="f1" action="" method="POST" onsubmit="return validate()">
         <table>
             <tr>
                 <td>Naam:</td>
-                <td><input type="text" name="name" />
-                    <span id="namelocation" style="color:red"></span></td>
+                <td>
+                    <input type="text" name="name" validate="max-length:30|min-length:5" />
+                    <span id="namelocation" style="color:red"></span>
+                </td>
             </tr>
             <tr>
                 <td>Wachtwoord:</td>
-                <td><input type="password" name="password" />
-                    <span id="passwordlocation" style="color:red"></span></td>
+                <td>
+                    <input type="password" name="password" validate="max-length:20|min-length:8" />
+                    <span id="passwordlocation" style="color:red"></span>
+                </td>
             </tr>
             <tr>
-                <td colspan="2"><input type="submit" value="register" /> </td>
+                <td colspan="2">
+                    <input type="submit" value="register" /> </td>
             </tr>
         </table>
     </form>
+
 </body>
 
 </html>
